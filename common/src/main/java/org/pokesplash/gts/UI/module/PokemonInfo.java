@@ -11,6 +11,8 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
+import org.pokesplash.gts.Gts;
 import org.pokesplash.gts.Listing.PokemonListing;
 import org.pokesplash.gts.util.Utils;
 
@@ -33,7 +35,7 @@ public abstract class PokemonInfo {
 		Style white = Style.EMPTY.withColor(TextColor.parseColor("white"));
 
 		Item ball = pokemon.getCaughtBall().item();
-		lore.add(Component.literal("§2Ball: ")
+		lore.add(Component.literal(Gts.language.getBall())
 				.append(Component.translatable(ball.getName(new ItemStack(ball)).getString()).setStyle(green)));
 
 		lore.add(Component.translatable("cobblemon.ui.info.species").setStyle(dark_green).append(": ")

@@ -84,6 +84,7 @@ public class PokemonListing implements Listing<Pokemon> {
 		return new Pokemon().loadFromJSON(pokemon);
 	}
 
+	@Override
 	public MutableComponent getDisplayName() {
 		Style blue = Style.EMPTY.withColor(TextColor.parseColor("blue"));
 		Style dark_aqua = Style.EMPTY.withColor(TextColor.parseColor("dark_aqua"));

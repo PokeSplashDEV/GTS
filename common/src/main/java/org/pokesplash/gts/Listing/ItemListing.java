@@ -3,6 +3,10 @@ package org.pokesplash.gts.Listing;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.TagParser;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.ItemStack;
 import org.pokesplash.gts.Gts;
 
@@ -84,6 +88,13 @@ public class ItemListing implements Listing<ItemStack> {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	@Override
+	public MutableComponent getDisplayName() {
+		Style dark_aqua = Style.EMPTY.withColor(TextColor.parseColor("dark_aqua"));
+		ItemStack item = this.getListing();
+		return Component.empty().setStyle(dark_aqua).append(item.getHoverName());
 	}
 
 	@Override

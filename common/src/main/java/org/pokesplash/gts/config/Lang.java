@@ -63,6 +63,7 @@ public class Lang {
 	private String sort_by_pokemon; // The name of the "Sort By Pokemon" button.
 	private String sort_by_name; // The name of the "Sort By Name" button.
 	private String receive_listing; // The name of the "Receive Listing" button.
+	private String ball; // Ball type lore.
 
 
 	/**
@@ -118,6 +119,7 @@ public class Lang {
 		sort_by_pokemon = "§6Sort By Pokemon";
 		sort_by_name = "§6Sort By Name";
 		receive_listing = "§2Receive Listing";
+		ball = "§2Ball: ";
 	}
 
 	/**
@@ -270,6 +272,9 @@ public class Lang {
 	public String getReceive_listing() {
 		return receive_listing;
 	}
+	public String getBall() {
+		return ball;
+	}
 
 	/**
 	 * Method to initialize the config.
@@ -328,6 +333,7 @@ public class Lang {
 					sort_by_pokemon = lang.getSort_by_pokemon();
 					sort_by_name = lang.getSort_by_name();
 					receive_listing = lang.getReceive_listing();
+					ball = lang.getBall();
 		});
 
 		if (!futureRead.join()) {

@@ -2,6 +2,8 @@ package org.pokesplash.gts.Listing;
 
 import java.util.UUID;
 
+import net.minecraft.network.chat.MutableComponent;
+
 /**
  * Used for both Pokemon and Item listings.
  * @param <T> The type of object returned from getListing(), either ItemStack or Pokemon.
@@ -16,4 +18,5 @@ public interface Listing<T> {
 	public long getEndTime(); // End time of the listing.
 	public T getListing(); // The object that has been listed.
 	public boolean isPokemon(); // Checks that the listing is a pokemon;
+	public MutableComponent getDisplayName(); // Checks that the listing is a pokemon;
 }

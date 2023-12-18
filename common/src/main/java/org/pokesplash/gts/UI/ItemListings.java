@@ -122,7 +122,7 @@ public class ItemListings {
 
 			Button button = GooeyButton.builder()
 					.display(listing.getListing())
-					.title("§3" + Utils.capitaliseFirst(listing.getListing().getDisplayName().getString()))
+					.title(listing.getDisplayName())
 					.lore(lore)
 					.onClick((action) -> {
 						ServerPlayer sender = action.getPlayer();
